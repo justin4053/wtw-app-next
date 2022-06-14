@@ -1,12 +1,11 @@
-import type { NextPage } from "next"
 import Banner from "../components/home/Banner"
 import Layout from "../components/layout"
 import HomeMeta from "../components/meta/HomeMeta"
-import { Container, MoviesContainer } from "./style"
-import CardList from "../components/shared/CardList"
+import { HomeContainer, MoviesContainer } from "./style"
 import { Movie } from "../typings"
 import { baseUrl } from "../contents/url"
 import requests from "../src/utils/requests"
+import CardListWrap from "../components/home/CardListWrap"
 
 interface Props {
   netflixOriginals: Movie[]
@@ -24,59 +23,12 @@ const Home: React.FC<Props> = (props: Props) => {
     <>
       <HomeMeta />
       <Layout>
-        <Container>
+        <HomeContainer>
           <Banner movies={props.trendingNow} />
           <MoviesContainer>
-            <CardList
-              category="熱門電影"
-              data={props.trendingNow}
-              isEvenRow={false}
-              isOneRow={false}
-            />
-            <CardList
-              category="Netflix原創電影"
-              data={props.netflixOriginals}
-              isEvenRow={true}
-              isOneRow={false}
-            />
-            <CardList
-              category="排行榜"
-              data={props.topRated}
-              isEvenRow={false}
-              isOneRow={false}
-            />
-            <CardList
-              category="動作電影"
-              data={props.actionMovies}
-              isEvenRow={true}
-              isOneRow={false}
-            />
-            <CardList
-              category="喜劇電影"
-              data={props.comedyMovies}
-              isEvenRow={false}
-              isOneRow={false}
-            />
-            <CardList
-              category="恐怖電影"
-              data={props.horrorMovies}
-              isEvenRow={true}
-              isOneRow={false}
-            />
-            <CardList
-              category="愛情電影"
-              data={props.romanceMovies}
-              isEvenRow={false}
-              isOneRow={false}
-            />
-            <CardList
-              category="紀錄片"
-              data={props.documentaries}
-              isEvenRow={true}
-              isOneRow={false}
-            />
+            <CardListWrap movies={props} />
           </MoviesContainer>
-        </Container>
+        </HomeContainer>
       </Layout>
     </>
   )

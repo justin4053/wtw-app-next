@@ -1,11 +1,12 @@
 import styled from "styled-components"
-import { MEDIA_QUERY_MD,MEDIA_QUERY_SM } from "../../../contents/mediaRWD"
+import { MEDIA_QUERY_MD, MEDIA_QUERY_SM } from "../../../contents/mediaRWD"
 
 export const NavMenu = styled.div<{ position: string }>`
   display: ${(props) => (props.position === "header" ? "flex" : "none")};
   flex: 1;
   justify-content: flex-end;
   align-items: center;
+
   div {
     width: 77px;
     margin-right: 7px;

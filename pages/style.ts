@@ -1,8 +1,7 @@
 import styled from "styled-components"
 import { MEDIA_QUERY_MD } from "../contents/mediaRWD"
 
-
-export const Container = styled.div`
+export const HomeContainer = styled.div`
   min-height: calc(100vh - 58px);
   overflow-x: hidden;
   position: relative;

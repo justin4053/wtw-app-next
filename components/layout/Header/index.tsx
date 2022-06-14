@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import Menu from "../Menu"
 import { Logo, LogoBox, Nav, Search, Title } from "./style"
 import Link from "next/link"
+import { NextImage } from "../../shared/NextImage/style"
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -28,7 +29,12 @@ const Header = () => {
         </LogoBox>
       </Link>
       <Search>
-        <img src="/images/magnifier.png" alt="" />
+        <NextImage
+          src="/images/magnifier.png"
+          objectFit="cover"
+          width={17}
+          height={17}
+        />
         <input type="text" placeholder="搜尋劇名 / 演員" />
       </Search>
       {/* Nav Right */}

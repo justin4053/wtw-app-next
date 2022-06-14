@@ -2,10 +2,10 @@ import styled from "styled-components"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import { MEDIA_QUERY_MD,MEDIA_QUERY_SM } from "../../../contents/mediaRWD"
-import { BtnOutline,BtnSolid } from "../../shared/Button/style"
+import { MEDIA_QUERY_MD, MEDIA_QUERY_SM } from "../../../contents/mediaRWD"
+import { BtnOutline, BtnSolid } from "../../shared/Button/style"
 
-export const Carousel = styled(Slider)`
+export const BannerCarousel = styled(Slider)`
   position: relative;
 
   ul li:first-child {
@@ -39,6 +39,7 @@ export const Carousel = styled(Slider)`
     opacity: 1;
     background: white;
   }
+
   .slick-prev::before,
   .slick-next::before {
     display: none;
@@ -71,7 +72,7 @@ export const Carousel = styled(Slider)`
     }
   }
 `
-export const Wrap = styled.div`
+export const BannerWrap = styled.div`
   width: 100%;
   height: 720px;
 
@@ -83,7 +84,7 @@ export const Wrap = styled.div`
     height: 250px;
   }
 `
-export const Background = styled.div<{ bgUrl: any }>`
+export const BannerBackground = styled.div<{ bgUrl: any }>`
   position: relative;
   background-image: linear-gradient(
       360deg,
@@ -97,7 +98,6 @@ export const Background = styled.div<{ bgUrl: any }>`
     ),
     url(${(props) => props.bgUrl});
   background-repeat: no-repeat;
-  /* background-position: top; */
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -112,11 +112,13 @@ export const BannerInfo = styled.div`
     top: 15%;
     left: 8%;
   }
+
   ${MEDIA_QUERY_SM} {
     top: 35%;
     left: 5%;
   }
 `
+
 export const BannerRating = styled.p`
   margin: 0;
   font-style: normal;
@@ -136,6 +138,7 @@ export const BannerRating = styled.p`
     font-size: 33px;
   }
 `
+
 export const BannerTitle = styled.p`
   font-weight: 500;
   font-size: 76px;
@@ -196,6 +199,7 @@ export const BannerAddToList = styled(BtnSolid)`
 
 export const DotsBox = styled.div`
   height: 20vh;
+
   ${MEDIA_QUERY_MD} {
     height: 15vh;
   }

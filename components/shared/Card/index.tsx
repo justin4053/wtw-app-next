@@ -20,7 +20,7 @@ const Card = ({ src, id, rating, name, isSamllPic, isOneRow }: CardProps) => {
             <CardImgBox isSamllPic={isSamllPic}>
               <NextImage src={src} layout="fill" />
             </CardImgBox>
-            <CardRating>{rating}</CardRating>
+            <CardRating>{rating.toFixed(1)}</CardRating>
           </CardBox>
           <CardName>{name}</CardName>
         </a>

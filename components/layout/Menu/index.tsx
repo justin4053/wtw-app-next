@@ -10,12 +10,16 @@ const Menu = ({ position }: Props) => {
     <NavMenu position={position}>
       <div>
         <Link href="/search">
-          <span>電影</span>
+          <a>
+            <span>電影</span>
+          </a>
         </Link>
       </div>
       <div>
         <Link href="/search">
-          <span>戲劇</span>
+          <a>
+            <span>戲劇</span>
+          </a>
         </Link>
       </div>
       <div>
