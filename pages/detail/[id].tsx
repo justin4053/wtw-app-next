@@ -22,20 +22,21 @@ import Layout from "../../components/layout"
 
 const Detail = () => {
   const [movieId, setMovieId] = useState("")
+  const [state, setState] = useState(false)
   const router = useRouter()
   const { id } = router.query
   useEffect(() => {
     if (!id) return
     setMovieId(id as string)
   }, [id])
+
   const { data: movieInfoData } = useGetMovieStreamsByIdQuery(movieId as string)
   const { data: moviePeopleData } = useGetMovieCastAndCrewByIdQuery(
     movieId as string
   )
-  const { data: movieSimilarData, isLoading } = useGetMoviesSimilarByIdQuery(
+  const { data: movieSimilarData, isSuccess } = useGetMoviesSimilarByIdQuery(
     movieId as string
   )
-  const [state, setState] = useState(false)
   const switchBtnHandler = (direction: string) => {
     if (direction === "left") {
       setState(false)
@@ -46,7 +47,7 @@ const Detail = () => {
   return (
     <>
       <Layout>
-        {!isLoading && (
+        {isSuccess && (
           <Container>
             <MovieDetailSM movieData={movieInfoData} />
             <SwitchBox>
@@ -80,7 +81,6 @@ const Detail = () => {
             <Controller state={state}>
               <CardList
                 category="相關影片"
-                // TODO: 之後資料要串回相關影片 用Search ById
                 data={movieSimilarData}
                 isEvenRow={true}
                 isOneRow={true}
