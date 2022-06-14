@@ -24,7 +24,7 @@ const Home: React.FC<Props> = (props: Props) => {
       <HomeMeta />
       <Layout>
         <HomeContainer>
-          <Banner movies={props.trendingNow} />
+          <Banner movies={props.netflixOriginals} />
           <MoviesContainer>
             <CardListWrap movies={props} />
           </MoviesContainer>
