@@ -34,7 +34,7 @@ const MovieDetail = ({ movieData, peopleData }: any) => {
         <DetailImage
           priority
           src={`${thumbnailUrl}${
-            movieData?.poster_path || movieData.backdrop_path
+            movieData?.poster_path || movieData?.backdrop_path
           }`}
           width={323}
           height={430}
@@ -45,7 +45,7 @@ const MovieDetail = ({ movieData, peopleData }: any) => {
       <DetailInfo>
         <GenresBox>
           <span>
-            {movieData.genres.map((genre: genreProps) => (
+            {movieData?.genres.map((genre: genreProps) => (
               <p key={genre.id}>{genre.name}</p>
             ))}
           </span>
@@ -56,8 +56,8 @@ const MovieDetail = ({ movieData, peopleData }: any) => {
         </GenresBox>
         {/* Movie Title */}
         <MovieBox>
-          <MovieTitle>{movieData.title}</MovieTitle>
-          <MovieRating>{movieData.vote_average}</MovieRating>
+          <MovieTitle>{movieData?.title}</MovieTitle>
+          <MovieRating>{movieData?.vote_average}</MovieRating>
         </MovieBox>
         {/* Movie Info */}
         <LargeInfoBox>
@@ -69,15 +69,15 @@ const MovieDetail = ({ movieData, peopleData }: any) => {
             <SmallInfoBox>
               <HighLightBar isRainbowBar />
               <span>
-                {languagesTranslator(movieData.original_language) ||
-                  movieData.original_language}
+                {languagesTranslator(movieData?.original_language) ||
+                  movieData?.original_language}
               </span>
             </SmallInfoBox>
             <SmallInfoBox>
               <HighLightBar isRainbowBar />
               <span>
-                {Math.floor(movieData.runtime / 60)}小時{" "}
-                {Math.floor(movieData.runtime % 60)}分鐘
+                {Math.floor(movieData?.runtime / 60)}小時{" "}
+                {Math.floor(movieData?.runtime % 60)}分鐘
               </span>
             </SmallInfoBox>
           </MiddleInfoBox>

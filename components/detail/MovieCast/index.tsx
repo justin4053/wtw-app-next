@@ -7,11 +7,11 @@ const MovieCast = ({ peopleData }: any) => {
     <CastBox>
       <CardContainer>
         {peopleData?.cast.map((peopleData: any) => (
-          <CastCard key={peopleData.id}>
-            {peopleData.profile_path ? (
+          <CastCard key={peopleData?.id}>
+            {peopleData?.profile_path ? (
               <CastImgBox>
                 <CastImg
-                  src={`${thumbnailUrl}${peopleData.profile_path}`}
+                  src={`${thumbnailUrl}${peopleData?.profile_path}`}
                   width={75}
                   height={75}
                   objectFit="cover"
@@ -26,7 +26,7 @@ const MovieCast = ({ peopleData }: any) => {
                 />
               </CastImgBox>
             )}
-            <p>{peopleData.name}</p>
+            <p>{peopleData?.name}</p>
           </CastCard>
         ))}
       </CardContainer>

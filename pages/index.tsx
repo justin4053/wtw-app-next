@@ -37,7 +37,7 @@ const Home: React.FC<Props> = (props: Props) => {
 export default Home
 
 // SSR
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const [
     netflixOriginals,
     trendingNow,
