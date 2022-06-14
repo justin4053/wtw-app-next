@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { MainContainer } from "../../components/shared/Container/style"
+import { MainContainer } from "../shared/Container/style"
 import { MEDIA_QUERY_MD, MEDIA_QUERY_SM } from "../../contents/mediaRWD"
 
 export const Container = styled(MainContainer)`

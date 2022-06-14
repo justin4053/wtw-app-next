@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { MEDIA_QUERY_MD } from "../contents/mediaRWD"
+import { MEDIA_QUERY_MD } from "../../contents/mediaRWD"
 
 export const HomeContainer = styled.div`
   min-height: calc(100vh - 58px);

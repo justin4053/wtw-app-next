@@ -1,7 +1,7 @@
 import Banner from "../components/home/Banner"
 import Layout from "../components/layout"
 import HomeMeta from "../components/meta/HomeMeta"
-import { HomeContainer, MoviesContainer } from "./style"
+import { HomeContainer, MoviesContainer } from "../components/home/style"
 import { Movie } from "../typings"
 import { baseUrl } from "../contents/url"
 import requests from "../src/utils/requests"

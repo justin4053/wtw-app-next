@@ -12,7 +12,7 @@ import {
   RightBtn,
   Space,
   SwitchBox
-} from "./style"
+} from "../../components/detail/style"
 import MovieDetailSM from "../../components/detail/MovieDetailSM"
 import MovieDetail from "../../components/detail/MovieDetail"
 import MovieCast from "../../components/detail/MovieCast"

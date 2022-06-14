@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import { MainContainer } from "../../components/shared/Container/style"
-import { MEDIA_QUERY_MD,MEDIA_QUERY_SM } from "../../contents/mediaRWD"
+import { MainContainer } from "../shared/Container/style"
+import { MEDIA_QUERY_MD, MEDIA_QUERY_SM } from "../../contents/mediaRWD"
 
 // TODO : 直接以電影id去搜尋整部資訊 更新redux
 interface stateProps {
@@ -66,13 +66,13 @@ export const SwitchBox = styled.div`
 export const LeftBtn = styled.div<stateProps>`
   a:after {
     transform: ${(props) =>
-    props.state ? "scaleX(1)" : "scaleX(0)"} !important;
+      props.state ? "scaleX(1)" : "scaleX(0)"} !important;
   }
 `
 export const RightBtn = styled.div<stateProps>`
   a:after {
     transform: ${(props) =>
-    props.state ? "scaleX(1)" : "scaleX(0)"} !important;
+      props.state ? "scaleX(1)" : "scaleX(0)"} !important;
   }
 `
 export const Controller = styled.div<stateProps>`
