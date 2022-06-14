@@ -83,7 +83,7 @@ const MovieDetail = ({ movieData, peopleData }: any) => {
           </MiddleInfoBox>
           <SmallInfoBox>
             <HighLightBar isRainbowBar />
-            <span>導演 {peopleData.crew[0].name}</span>
+            <span>導演 {peopleData?.crew[0].name}</span>
           </SmallInfoBox>
           <SmallInfoBox>
             <HighLightBar isRainbowBar />
@@ -91,7 +91,7 @@ const MovieDetail = ({ movieData, peopleData }: any) => {
           </SmallInfoBox>
           <SmallInfoBox>
             <HighLightBar isRainbowBar={false} />
-            <span>{movieData.overview}</span>
+            <span>{movieData?.overview}</span>
           </SmallInfoBox>
           <SmallInfoBox>
             <HighLightBar isRainbowBar />
