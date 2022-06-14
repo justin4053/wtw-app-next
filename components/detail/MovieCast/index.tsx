@@ -20,10 +20,9 @@ const MovieCast = ({ peopleData }: any) => {
             ) : (
               <CastImgBox>
                 <CastImg
-                  src="http://d.ifengimg.com/mw604/y0.ifengimg.com/ifengimcp/pic/20160418/5628dd6ecd9fa100f371_size30_w521_h534.jpg"
+                  src={"/images/no-profile-cast.png"}
                   width={75}
                   height={75}
-                  objectFit="cover"
                 />
               </CastImgBox>
             )}

@@ -26,10 +26,10 @@ export const CardContainer = styled.div`
 export const CastImgBox = styled.div`
   width: 75px;
   height: 75px;
+  filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.48));
 `
 
 export const CastImg = styled(NextImage)`
-  filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.48));
   border-radius: 12px;
 `
 
