@@ -1,7 +1,6 @@
 import "../styles/globals.css"
 
 import type { AppProps } from "next/app"
-import { createGlobalStyle } from "styled-components"
 import Providers from "../src/providers"
 import { Provider } from "react-redux"
 import { store } from "../src/app/store"
