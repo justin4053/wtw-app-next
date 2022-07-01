@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { MEDIA_QUERY_MD, MEDIA_QUERY_SM } from "../../../contents/mediaRWD"
+import { MEDIA_QUERY_MD,MEDIA_QUERY_SM } from "../../../contents/mediaRWD"
 
 export const Btn = styled.div`
   width: 160px;

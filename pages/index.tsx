@@ -1,7 +1,7 @@
 import Banner from "../components/home/Banner"
 import Layout from "../components/layout"
 import HomeMeta from "../components/meta/HomeMeta"
-import { HomeContainer, MoviesContainer } from "../components/home/style"
+import { HomeContainer, MoviesContainer } from "./style"
 import { Movie } from "../typings"
 import { baseUrl } from "../contents/url"
 import requests from "../src/utils/requests"
@@ -24,7 +24,7 @@ const Home: React.FC<Props> = (props: Props) => {
       <HomeMeta />
       <Layout>
         <HomeContainer>
-          <Banner movies={props.netflixOriginals} />
+          <Banner movies={props.trendingNow} />
           <MoviesContainer>
             <CardListWrap movies={props} />
           </MoviesContainer>
@@ -37,7 +37,7 @@ const Home: React.FC<Props> = (props: Props) => {
 export default Home
 
 // SSR
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const [
     netflixOriginals,
     trendingNow,

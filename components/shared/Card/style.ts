@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { MEDIA_QUERY_MD, MEDIA_QUERY_SM } from "../../../contents/mediaRWD"
+import { MEDIA_QUERY_MD,MEDIA_QUERY_SM } from "../../../contents/mediaRWD"
 
 export const CardWrap = styled.div<{ isSamllPic: boolean }>`
   text-align: center;
@@ -31,7 +31,6 @@ export const CardBox = styled.div<{ isSamllPic: boolean }>`
 export const CardImgBox = styled.div<{ isSamllPic: boolean }>`
   width: 152px;
   height: 201px;
-  position: relative;
 
   ${MEDIA_QUERY_MD} {
     height: ${(props) => (props.isSamllPic ? "190px" : "201px")};

@@ -23,8 +23,8 @@ const CardList = ({ category, data, isEvenRow, isOneRow }: Props) => {
   const rowRef = useRef<HTMLDivElement>(null)
   const [isMoved, setIsMoved] = useState(false)
   const [selectData, setSelectData] = useState(data)
-
   // 判斷Device類型去切割Data數目(不同)
+
   const NewData = () => {
     if (window.innerWidth <= 428 && isEvenRow) {
       setSelectData(data?.slice(0, 6))
@@ -35,8 +35,8 @@ const CardList = ({ category, data, isEvenRow, isOneRow }: Props) => {
     }
   }
   useEffect(() => {
-    window.addEventListener("resize", NewData)
     NewData()
+    window.addEventListener("resize", NewData)
     return () => {
       window.removeEventListener("resize", NewData)
     }
