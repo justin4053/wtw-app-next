@@ -1,11 +1,12 @@
 import Banner from "../components/home/Banner"
 import Layout from "../components/layout"
 import HomeMeta from "../components/meta/HomeMeta"
-import { HomeContainer, MoviesContainer } from "./style"
+import { HomeContainer, MoviesContainer } from "../components/home/style"
 import { Movie } from "../typings"
 import { baseUrl } from "../contents/url"
 import requests from "../src/utils/requests"
 import CardListWrap from "../components/home/CardListWrap"
+import { GetStaticProps } from "next"
 
 interface Props {
   netflixOriginals: Movie[]
@@ -24,7 +25,7 @@ const Home: React.FC<Props> = (props: Props) => {
       <HomeMeta />
       <Layout>
         <HomeContainer>
-          <Banner movies={props.trendingNow} />
+          <Banner movies={props.netflixOriginals} />
           <MoviesContainer>
             <CardListWrap movies={props} />
           </MoviesContainer>
@@ -37,7 +38,7 @@ const Home: React.FC<Props> = (props: Props) => {
 export default Home
 
 // SSR
-export const getServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const [
     netflixOriginals,
     trendingNow,

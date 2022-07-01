@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { MEDIA_QUERY_SM,MEDIA_QUERY_MD } from "../../../contents/mediaRWD"
+import { MEDIA_QUERY_SM, MEDIA_QUERY_MD } from "../../../contents/mediaRWD"
 import { BtnSolid } from "../../shared/Button/style"
 import { BasicBox } from "../../shared/Container/style"
 import { NextImage } from "../../shared/NextImage/style"
@@ -18,13 +18,13 @@ export const DetailBox = styled(BasicBox)`
   }
 `
 export const DetailVideo = styled.div`
-   ${MEDIA_QUERY_SM} {
-      display: none;
+  ${MEDIA_QUERY_SM} {
+    display: none;
   }
 `
 export const DetailImage = styled(NextImage)`
-filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.48));
-border-radius: 20px;
+  filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.48));
+  border-radius: 20px;
 `
 
 export const DetailInfo = styled.div`
@@ -35,10 +35,9 @@ export const DetailInfo = styled.div`
 export const GenresBox = styled.div`
   display: flex;
   align-items: center;
-
-  div {
+  justify-content: space-between;
+  span {
     display: flex;
-    flex: 1;
 
     p {
       background: #161616;
@@ -56,7 +55,6 @@ export const GenresBox = styled.div`
 
 export const BtnMDBox = styled.div`
   display: flex;
-  justify-content: flex-end;
 
   ${MEDIA_QUERY_SM} {
     display: none !important;
@@ -83,7 +81,7 @@ export const MovieTitle = styled.div`
   font-family: "Noto Sans";
   font-weight: 500;
   font-size: 38px;
-  
+
   ${MEDIA_QUERY_MD} {
     font-size: 30px;
   }
@@ -113,20 +111,12 @@ export const LargeInfoBox = styled.div``
 export const MiddleInfoBox = styled.div`
   display: flex;
 `
-export const SmallInfoBox = styled.div<{ isRainbowBar: boolean }>`
+export const SmallInfoBox = styled.div`
   display: flex;
   margin-right: 18px;
   margin-bottom: 12px;
   align-items: center;
-  div {
-    background: ${(props) =>
-    props.isRainbowBar
-      ? "linear-gradient(91.47deg, #c10171 3.73%, #5c00f2 100%);"
-      : null};
-    border-radius: 50px;
-    width: 3px;
-    height: 23px;
-  }
+
   span {
     margin-left: 8px;
     font-family: "Noto Sans TC";
@@ -138,11 +128,6 @@ export const SmallInfoBox = styled.div<{ isRainbowBar: boolean }>`
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    img {
-      margin-right: 9px;
-      width: 36px;
-      height: 36px;
-    }
   }
 
   ${MEDIA_QUERY_MD} {
@@ -150,4 +135,20 @@ export const SmallInfoBox = styled.div<{ isRainbowBar: boolean }>`
       -webkit-line-clamp: 2;
     }
   }
+`
+
+export const HighLightBar = styled.div<{ isRainbowBar: boolean }>`
+  background: ${(props) =>
+    props.isRainbowBar
+      ? "linear-gradient(91.47deg, #c10171 3.73%, #5c00f2 100%);"
+      : null};
+  border-radius: 50px;
+  width: 3px;
+  height: 23px;
+`
+
+export const StreamImageBox = styled.span`
+  position: relative;
+  width: 36px;
+  height: 36px;
 `

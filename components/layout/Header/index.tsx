@@ -24,7 +24,7 @@ const Header = () => {
       {/* Nav Left */}
       <Link href="/">
         <LogoBox>
-          <Logo src="/images/Logo.png" />
+          <Logo src="/images/Logo.png" width={38} height={38} />
           <Title>挖！影</Title>
         </LogoBox>
       </Link>

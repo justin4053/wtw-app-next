@@ -47,7 +47,7 @@ const CardListWrap = ({ movies }: any) => {
       />
       <CardList
         category="紀錄片"
-        data={movies.documentaries}
+        data={movies.horrorMovies}
         isEvenRow={true}
         isOneRow={false}
       />

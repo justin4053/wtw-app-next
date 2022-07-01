@@ -1,6 +1,6 @@
 import styled from "styled-components"
-import { MEDIA_QUERY_MD,MEDIA_QUERY_SM } from "../../../contents/mediaRWD"
-
+import { MEDIA_QUERY_MD, MEDIA_QUERY_SM } from "../../../contents/mediaRWD"
+import { NextImage } from "../../shared/NextImage/style"
 
 export const Nav = styled.nav<{ isScrolled: boolean }>`
   background: ${(props) =>
@@ -24,15 +24,17 @@ export const Nav = styled.nav<{ isScrolled: boolean }>`
     padding: 0 16px;
   }
 `
+
+export const Logo = styled(NextImage)``
 export const LogoBox = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
 `
-export const Logo = styled.img`
-  width: 38px;
-  height: 38px;
-`
+// export const Logo = styled.img`
+//   width: 38px;
+//   height: 38px;
+// `
 export const Title = styled.p`
   min-width: 54px;
   font-family: "Noto Sans TC";

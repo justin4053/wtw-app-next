@@ -1,5 +1,6 @@
 import { languagesTranslator } from "../../../contents/languages"
 import { thumbnailUrl } from "../../../contents/url"
+import { NextImage } from "../../shared/NextImage/style"
 import {
   BtnMDBox,
   DetailBox,
@@ -8,12 +9,14 @@ import {
   DetailInfo,
   DetailVideo,
   GenresBox,
+  HighLightBar,
   LargeInfoBox,
   MiddleInfoBox,
   MovieBox,
   MovieRating,
   MovieTitle,
-  SmallInfoBox
+  SmallInfoBox,
+  StreamImageBox
 } from "./style"
 
 // Interface
@@ -29,6 +32,7 @@ const MovieDetail = ({ movieData, peopleData }: any) => {
       {/* Left */}
       <DetailVideo>
         <DetailImage
+          priority
           src={`${thumbnailUrl}${
             movieData?.poster_path || movieData?.backdrop_path
           }`}
@@ -40,11 +44,11 @@ const MovieDetail = ({ movieData, peopleData }: any) => {
       {/* Right */}
       <DetailInfo>
         <GenresBox>
-          <div>
+          <span>
             {movieData?.genres.map((genre: genreProps) => (
-              <p key={genre?.id}>{genre?.name}</p>
+              <p key={genre.id}>{genre.name}</p>
             ))}
-          </div>
+          </span>
           {/* 加入片單 */}
           <BtnMDBox>
             <DetailBtn>加入片單</DetailBtn>
@@ -58,47 +62,55 @@ const MovieDetail = ({ movieData, peopleData }: any) => {
         {/* Movie Info */}
         <LargeInfoBox>
           <MiddleInfoBox>
-            <SmallInfoBox isRainbowBar>
-              <div></div>
+            <SmallInfoBox>
+              <HighLightBar isRainbowBar />
               <span>{movieData?.release_date}</span>
             </SmallInfoBox>
-            <SmallInfoBox isRainbowBar>
-              <div></div>
+            <SmallInfoBox>
+              <HighLightBar isRainbowBar />
               <span>
                 {languagesTranslator(movieData?.original_language) ||
                   movieData?.original_language}
               </span>
             </SmallInfoBox>
-            <SmallInfoBox isRainbowBar>
-              <div></div>
+            <SmallInfoBox>
+              <HighLightBar isRainbowBar />
               <span>
                 {Math.floor(movieData?.runtime / 60)}小時{" "}
                 {Math.floor(movieData?.runtime % 60)}分鐘
               </span>
             </SmallInfoBox>
           </MiddleInfoBox>
-          <SmallInfoBox isRainbowBar>
-            <div></div>
+          <SmallInfoBox>
+            <HighLightBar isRainbowBar />
             <span>導演 {peopleData?.crew[0].name}</span>
           </SmallInfoBox>
-          <SmallInfoBox isRainbowBar>
-            <div></div>
+          <SmallInfoBox>
+            <HighLightBar isRainbowBar />
             <span>劇情介紹</span>
           </SmallInfoBox>
-          <SmallInfoBox isRainbowBar={false}>
-            <div></div>
+          <SmallInfoBox>
+            <HighLightBar isRainbowBar={false} />
             <span>{movieData?.overview}</span>
           </SmallInfoBox>
-          <SmallInfoBox isRainbowBar>
-            <div></div>
+          <SmallInfoBox>
+            <HighLightBar isRainbowBar />
             <span>播放平台</span>
           </SmallInfoBox>
-          <SmallInfoBox isRainbowBar={false}>
-            <div></div>
-            <span>
-              <img src="/images/videoIcons/netflix-icon.png" alt="" />
-              <img src="/images/videoIcons/appletv-icon.png" alt="" />
-            </span>
+          <SmallInfoBox>
+            <HighLightBar isRainbowBar={false} />
+            <StreamImageBox>
+              <NextImage
+                src="/images/videoIcons/netflix-icon.png"
+                layout="fill"
+              />
+            </StreamImageBox>
+            <StreamImageBox>
+              <NextImage
+                src="/images/videoIcons/appletv-icon.png"
+                layout="fill"
+              />
+            </StreamImageBox>
           </SmallInfoBox>
         </LargeInfoBox>
       </DetailInfo>
