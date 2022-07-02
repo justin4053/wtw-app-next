@@ -19,6 +19,7 @@ import MovieCast from "../../components/detail/MovieCast"
 import CardList from "../../components/shared/CardList"
 import MovieRecommendations from "../../components/detail/MovieRecommendations"
 import Layout from "../../components/layout"
+import { ErrorMsg } from "./style"
 
 const Detail = () => {
   const [movieId, setMovieId] = useState("")
@@ -35,9 +36,11 @@ const Detail = () => {
   const { data: moviePeopleData } = useGetMovieCastAndCrewByIdQuery(
     movieId as string
   )
-  const { data: movieSimilarData, isSuccess } = useGetMoviesSimilarByIdQuery(
-    movieId as string
-  )
+  const {
+    data: movieSimilarData,
+    isSuccess,
+    isError
+  } = useGetMoviesSimilarByIdQuery(movieId as string)
   const switchBtnHandler = (direction: string) => {
     if (direction === "left") {
       setState(false)
@@ -45,6 +48,14 @@ const Detail = () => {
       setState(true)
     }
   }
+  if (isError)
+    return (
+      <>
+        <Layout>
+          <ErrorMsg>API fatch failed (choose another movie)</ErrorMsg>
+        </Layout>
+      </>
+    )
   return (
     <>
       <Layout>

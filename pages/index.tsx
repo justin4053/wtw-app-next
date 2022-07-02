@@ -20,6 +20,7 @@ interface Props {
 }
 
 const Home: React.FC<Props> = (props: Props) => {
+  console.log(props.trendingNow)
   return (
     <>
       <HomeMeta />
