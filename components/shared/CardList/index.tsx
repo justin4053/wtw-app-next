@@ -25,22 +25,22 @@ const CardList = ({ category, data, isEvenRow, isOneRow }: Props) => {
   const [selectData, setSelectData] = useState(data)
 
   // 判斷Device類型去切割Data數目(不同)
-  const NewData = () => {
-    if (window.innerWidth <= 428 && isEvenRow) {
-      setSelectData(data?.slice(0, 6))
-    } else if (window.innerWidth <= 768 && isEvenRow) {
-      setSelectData(data?.slice(0, 10))
-    } else {
-      setSelectData(data)
-    }
-  }
   useEffect(() => {
+    const NewData = () => {
+      if (window.innerWidth <= 428 && isEvenRow) {
+        setSelectData(data?.slice(0, 6))
+      } else if (window.innerWidth <= 768 && isEvenRow) {
+        setSelectData(data?.slice(0, 10))
+      } else {
+        setSelectData(data)
+      }
+    }
     window.addEventListener("resize", NewData)
     NewData()
     return () => {
       window.removeEventListener("resize", NewData)
     }
-  })
+  }, [isEvenRow, data])
 
   const handleClick = (direction: string) => {
     setIsMoved(true)
@@ -58,7 +58,6 @@ const CardList = ({ category, data, isEvenRow, isOneRow }: Props) => {
       <InnerBox isEvenRow={isEvenRow}>
         <Title>{category}</Title>
         <ArrowLeftBox onClick={() => handleClick("left")}>
-          {/* <img src="/images/arrow-left-solid.png" alt="" /> */}
           <NextImage
             src="/images/arrow-left-solid.png"
             width={50}

@@ -30,11 +30,9 @@ export const LogoBox = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
+  min-width: 5rem;
 `
-// export const Logo = styled.img`
-//   width: 38px;
-//   height: 38px;
-// `
+
 export const Title = styled.p`
   min-width: 54px;
   font-family: "Noto Sans TC";

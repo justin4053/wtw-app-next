@@ -19,14 +19,6 @@ export const CardWrap = styled.div<{ isSamllPic: boolean }>`
 `
 export const CardBox = styled.div<{ isSamllPic: boolean }>`
   position: relative;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-    filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.48));
-  }
 `
 export const CardImgBox = styled.div<{ isSamllPic: boolean }>`
   width: 152px;

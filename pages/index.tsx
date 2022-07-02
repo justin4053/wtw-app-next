@@ -1,7 +1,11 @@
 import Banner from "../components/home/Banner"
 import Layout from "../components/layout"
 import HomeMeta from "../components/meta/HomeMeta"
-import { HomeContainer, MoviesContainer } from "../components/home/style"
+import {
+  CopyRight,
+  HomeContainer,
+  MoviesContainer
+} from "../components/home/style"
 import { Movie } from "../typings"
 import { baseUrl } from "../contents/url"
 import requests from "../src/utils/requests"
@@ -20,7 +24,6 @@ interface Props {
 }
 
 const Home: React.FC<Props> = (props: Props) => {
-  console.log(props.trendingNow)
   return (
     <>
       <HomeMeta />
@@ -31,6 +34,7 @@ const Home: React.FC<Props> = (props: Props) => {
             <CardListWrap movies={props} />
           </MoviesContainer>
         </HomeContainer>
+        <CopyRight>Copyright © 2022 Justin Kuo. All rights reserved.</CopyRight>
       </Layout>
     </>
   )
