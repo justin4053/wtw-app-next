@@ -8,6 +8,7 @@ import React, { useEffect, useState } from "react"
 import {
   Container,
   Controller,
+  ErrorMsg,
   LeftBtn,
   RightBtn,
   Space,
@@ -19,7 +20,6 @@ import MovieCast from "../../components/detail/MovieCast"
 import CardList from "../../components/shared/CardList"
 import MovieRecommendations from "../../components/detail/MovieRecommendations"
 import Layout from "../../components/layout"
-import { ErrorMsg } from "./style"
 
 const Detail = () => {
   const [movieId, setMovieId] = useState("")

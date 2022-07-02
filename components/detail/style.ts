@@ -84,3 +84,9 @@ export const Controller = styled.div<stateProps>`
 export const Space = styled.div`
   height: 50px;
 `
+export const ErrorMsg = styled.div`
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+`
