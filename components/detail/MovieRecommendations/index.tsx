@@ -1,5 +1,7 @@
 import {
   MyRecoBox,
+  NextImage,
+  NextImgWrap,
   OthersImgBox,
   OthersName,
   OthersRatingBox,
@@ -15,89 +17,314 @@ const MovieRecommendations = () => {
       <MyRecoBox>
         <div></div>
         <span>我來評論</span>
-        <img src="/images/star-circle.png" alt="" />
-        <img src="/images/star-circle.png" alt="" />
-        <img src="/images/star-circle.png" alt="" />
-        <img src="/images/star-circle.png" alt="" />
-        <img src="/images/star-circle.png" alt="" />
+        <NextImage
+          src="/images/star-circle.png"
+          alt=""
+          width={44}
+          height={44}
+        />
+        <NextImage
+          src="/images/star-circle.png"
+          alt=""
+          width={44}
+          height={44}
+        />
+        <NextImage
+          src="/images/star-circle.png"
+          alt=""
+          width={44}
+          height={44}
+        />
+        <NextImage
+          src="/images/star-circle.png"
+          alt=""
+          width={44}
+          height={44}
+        />
+        <NextImage
+          src="/images/star-circle.png"
+          alt=""
+          width={44}
+          height={44}
+        />
       </MyRecoBox>
       <OthersRecoBox>
         <OthersWrap>
           <OthersImgBox>
-            <img src="/images/title-profile-pc.png" alt="" />
+            <NextImage
+              src="/images/title-profile-pc.png"
+              alt=""
+              width={46}
+              height={46}
+            />
           </OthersImgBox>
           <OthersReco>
             <OthersName>陳大明</OthersName>
             <OthersRatingBox>
-              <img src="/images/white-star.png" alt="" />
-              <img src="/images/white-star.png" alt="" />
-              <img src="/images/white-star.png" alt="" />
-              <img src="/images/white-star.png" alt="" />
-              <img src="/images/white-star.png" alt="" />
+              <NextImgWrap>
+                <NextImage
+                  src="/images/white-star.png"
+                  alt=""
+                  width={17}
+                  height={17}
+                />
+              </NextImgWrap>
+              <NextImgWrap>
+                <NextImage
+                  src="/images/white-star.png"
+                  alt=""
+                  width={17}
+                  height={17}
+                />
+              </NextImgWrap>
+              <NextImgWrap>
+                <NextImage
+                  src="/images/white-star.png"
+                  alt=""
+                  width={17}
+                  height={17}
+                />
+              </NextImgWrap>
+              <NextImgWrap>
+                <NextImage
+                  src="/images/white-star.png"
+                  alt=""
+                  width={17}
+                  height={17}
+                />
+              </NextImgWrap>
+              <NextImgWrap>
+                <NextImage
+                  src="/images/white-star.png"
+                  alt=""
+                  width={17}
+                  height={17}
+                />
+              </NextImgWrap>
             </OthersRatingBox>
             <p>老實說要不是演員感覺很努力在演，連兩顆星都懶得給.....</p>
           </OthersReco>
         </OthersWrap>
         <OthersWrap>
           <OthersImgBox>
-            <img src="/images/title-profile-pc.png" alt="" />
+            <NextImage
+              src="/images/title-profile-pc.png"
+              alt=""
+              width={46}
+              height={46}
+            />
           </OthersImgBox>
           <OthersReco>
             <OthersName>陳大明</OthersName>
             <OthersRatingBox>
-              <img src="/images/white-star.png" alt="" />
-              <img src="/images/white-star.png" alt="" />
-              <img src="/images/white-star.png" alt="" />
-              <img src="/images/white-star.png" alt="" />
-              <img src="/images/white-star.png" alt="" />
+              <NextImgWrap>
+                <NextImage
+                  src="/images/white-star.png"
+                  alt=""
+                  width={17}
+                  height={17}
+                />
+              </NextImgWrap>
+              <NextImgWrap>
+                <NextImage
+                  src="/images/white-star.png"
+                  alt=""
+                  width={17}
+                  height={17}
+                />
+              </NextImgWrap>
+              <NextImgWrap>
+                <NextImage
+                  src="/images/white-star.png"
+                  alt=""
+                  width={17}
+                  height={17}
+                />
+              </NextImgWrap>
+              <NextImgWrap>
+                <NextImage
+                  src="/images/white-star.png"
+                  alt=""
+                  width={17}
+                  height={17}
+                />
+              </NextImgWrap>
+              <NextImgWrap>
+                <NextImage
+                  src="/images/white-star.png"
+                  alt=""
+                  width={17}
+                  height={17}
+                />
+              </NextImgWrap>
             </OthersRatingBox>
             <p>老實說要不是演員感覺很努力在演，連兩顆星都懶得給.....</p>
           </OthersReco>
         </OthersWrap>
         <OthersWrap>
           <OthersImgBox>
-            <img src="/images/title-profile-pc.png" alt="" />
+            <NextImage
+              src="/images/title-profile-pc.png"
+              alt=""
+              width={46}
+              height={46}
+            />
           </OthersImgBox>
           <OthersReco>
             <OthersName>陳大明</OthersName>
             <OthersRatingBox>
-              <img src="/images/white-star.png" alt="" />
-              <img src="/images/white-star.png" alt="" />
-              <img src="/images/white-star.png" alt="" />
-              <img src="/images/white-star.png" alt="" />
-              <img src="/images/white-star.png" alt="" />
+              <NextImgWrap>
+                <NextImage
+                  src="/images/white-star.png"
+                  alt=""
+                  width={17}
+                  height={17}
+                />
+              </NextImgWrap>
+              <NextImgWrap>
+                <NextImage
+                  src="/images/white-star.png"
+                  alt=""
+                  width={17}
+                  height={17}
+                />
+              </NextImgWrap>
+              <NextImgWrap>
+                <NextImage
+                  src="/images/white-star.png"
+                  alt=""
+                  width={17}
+                  height={17}
+                />
+              </NextImgWrap>
+              <NextImgWrap>
+                <NextImage
+                  src="/images/white-star.png"
+                  alt=""
+                  width={17}
+                  height={17}
+                />
+              </NextImgWrap>
+              <NextImgWrap>
+                <NextImage
+                  src="/images/white-star.png"
+                  alt=""
+                  width={17}
+                  height={17}
+                />
+              </NextImgWrap>
             </OthersRatingBox>
             <p>老實說要不是演員感覺很努力在演，連兩顆星都懶得給.....</p>
           </OthersReco>
         </OthersWrap>
         <OthersWrap>
           <OthersImgBox>
-            <img src="/images/title-profile-pc.png" alt="" />
+            <NextImage
+              src="/images/title-profile-pc.png"
+              alt=""
+              width={46}
+              height={46}
+            />
           </OthersImgBox>
           <OthersReco>
             <OthersName>陳大明</OthersName>
             <OthersRatingBox>
-              <img src="/images/white-star.png" alt="" />
-              <img src="/images/white-star.png" alt="" />
-              <img src="/images/white-star.png" alt="" />
-              <img src="/images/white-star.png" alt="" />
-              <img src="/images/white-star.png" alt="" />
+              <NextImgWrap>
+                <NextImage
+                  src="/images/white-star.png"
+                  alt=""
+                  width={17}
+                  height={17}
+                />
+              </NextImgWrap>
+              <NextImgWrap>
+                <NextImage
+                  src="/images/white-star.png"
+                  alt=""
+                  width={17}
+                  height={17}
+                />
+              </NextImgWrap>
+              <NextImgWrap>
+                <NextImage
+                  src="/images/white-star.png"
+                  alt=""
+                  width={17}
+                  height={17}
+                />
+              </NextImgWrap>
+              <NextImgWrap>
+                <NextImage
+                  src="/images/white-star.png"
+                  alt=""
+                  width={17}
+                  height={17}
+                />
+              </NextImgWrap>
+              <NextImgWrap>
+                <NextImage
+                  src="/images/white-star.png"
+                  alt=""
+                  width={17}
+                  height={17}
+                />
+              </NextImgWrap>
             </OthersRatingBox>
             <p>老實說要不是演員感覺很努力在演，連兩顆星都懶得給.....</p>
           </OthersReco>
         </OthersWrap>
         <OthersWrap>
           <OthersImgBox>
-            <img src="/images/title-profile-pc.png" alt="" />
+            <NextImage
+              src="/images/title-profile-pc.png"
+              alt=""
+              width={46}
+              height={46}
+            />
           </OthersImgBox>
           <OthersReco>
             <OthersName>陳大明</OthersName>
             <OthersRatingBox>
-              <img src="/images/white-star.png" alt="" />
-              <img src="/images/white-star.png" alt="" />
-              <img src="/images/white-star.png" alt="" />
-              <img src="/images/white-star.png" alt="" />
-              <img src="/images/white-star.png" alt="" />
+              <NextImgWrap>
+                <NextImage
+                  src="/images/white-star.png"
+                  alt=""
+                  width={17}
+                  height={17}
+                />
+              </NextImgWrap>
+              <NextImgWrap>
+                <NextImage
+                  src="/images/white-star.png"
+                  alt=""
+                  width={17}
+                  height={17}
+                />
+              </NextImgWrap>
+              <NextImgWrap>
+                <NextImage
+                  src="/images/white-star.png"
+                  alt=""
+                  width={17}
+                  height={17}
+                />
+              </NextImgWrap>
+              <NextImgWrap>
+                <NextImage
+                  src="/images/white-star.png"
+                  alt=""
+                  width={17}
+                  height={17}
+                />
+              </NextImgWrap>
+              <NextImgWrap>
+                <NextImage
+                  src="/images/white-star.png"
+                  alt=""
+                  width={17}
+                  height={17}
+                />
+              </NextImgWrap>
             </OthersRatingBox>
             <p>老實說要不是演員感覺很努力在演，連兩顆星都懶得給.....</p>
           </OthersReco>

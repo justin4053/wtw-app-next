@@ -1,6 +1,9 @@
+import Image from "next/image"
 import styled from "styled-components"
 import { MEDIA_QUERY_MD } from "../../../contents/mediaRWD"
 import { BasicBox } from "../../shared/Container/style"
+
+export const NextImage = styled(Image)``
 
 export const RecommendationsBox = styled(BasicBox)`
   display: flex;
@@ -32,10 +35,6 @@ export const MyRecoBox = styled.div`
     font-weight: 400;
     font-size: 16px;
   }
-  img {
-    width: 44px;
-    height: 44px;
-  }
 
   ${MEDIA_QUERY_MD} {
     justify-content: center;
@@ -61,12 +60,7 @@ export const OthersWrap = styled.div`
   height: 90px;
   padding: 10px 24px 10px 16px;
 `
-export const OthersImgBox = styled.div`
-  img {
-    width: 46px;
-    height: 46px;
-  }
-`
+export const OthersImgBox = styled.div``
 export const OthersReco = styled.div`
   margin-left: 14px;
   display: flex;
@@ -82,9 +76,8 @@ export const OthersReco = styled.div`
 `
 export const OthersName = styled.div``
 export const OthersRatingBox = styled.div`
-  img {
-    width: 17px;
-    height: 17px;
-    margin-right: 10px;
-  }
+  display: flex;
+`
+export const NextImgWrap = styled.div`
+  margin-right: 0.5rem;
 `
