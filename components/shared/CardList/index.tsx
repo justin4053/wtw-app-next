@@ -40,7 +40,7 @@ const CardList = ({ category, data, isEvenRow, isOneRow }: Props) => {
     return () => {
       window.removeEventListener("resize", NewData)
     }
-  }, [])
+  }, [NewData])
 
   const handleClick = (direction: string) => {
     setIsMoved(true)
